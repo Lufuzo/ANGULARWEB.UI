@@ -1,0 +1,23 @@
+<div class="container my-5 ">
+    <h1 class="mb-3">Words</h1>
+    <table class="table" *ngIf="words && words.length > 0">
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Word</th>
+        <th></th>
+       </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let word of words">
+             <td>{{word.id}}</td>
+             <td>{{word.value}}</td>
+             <td><a [routerLink]="['/words','edit',word.id]">Details</a></td>
+              
+          </tr>
+        </tbody>
+    </table>
+    <p *ngIf="!words || words.length <= 0">No words found</p>
+
+
+</div>

@@ -1,0 +1,26 @@
+<div class="container my-5">
+    <h1 class="mb-3"> Edit Word</h1>
+    
+
+        <form #form="ngForm" (ngSubmit) ="updateWord()">
+     <div class="mb-3">
+        
+            <div class="col-6">
+                <label for="id" class="form-label">Id</label>
+                <input type="text" class="form-control" id="id"  readonly name="id" [(ngModel)] = "wordDetails.id">    
+        </div>
+        
+            <div class="col-6">
+                    <label for="name" class="form-label">Edit Word</label>
+                    <input type="text" class="form-control" id="name"  name="name" [(ngModel)] = "wordDetails.value">    
+            </div>
+
+        </div>
+            
+            
+            <button type="submit" class="btn btn-primary mr-15">Save</button>
+            <button type="button" class="btn btn-danger" (click)="deleteWord(wordDetails.id!)">Delete</button>
+          </form>
+    
+</div>
+

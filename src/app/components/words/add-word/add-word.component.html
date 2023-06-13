@@ -1,0 +1,19 @@
+<div class="container my-5">
+    <h1 class="mb-3"> Add New Word</h1>
+    
+
+        <form #form="ngForm" (ngSubmit) ="addNewWord()">
+     <div class="mb-3">
+
+            <div class="col-6">
+                    <label for="name" class="form-label">Enter New Word</label>
+                    <input type="text" class="form-control" id="name"  name="name" [(ngModel)] = "addWordRequest.value">    
+            </div>
+            
+        </div>
+            
+            
+            <button type="submit" class="btn btn-primary">Save</button>
+          </form>
+    
+</div>
